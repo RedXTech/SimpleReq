@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'SimpleReq'
-  s.version     = '0.0.0'
+  s.version     = '0.0.1'
   s.date        = '2016-11-18'
   s.summary     = "Simple requests library for Ruby."
   s.description = "A simple requests library for Ruby."
