@@ -44,7 +44,7 @@ class SimpleReq
         args << "#{p}=#{v}"
         first = false
       }
-      req = get(url, $args).body
+      req = get(url, get).body
       doc = Hpricot(req)
       return (doc/el)
     end
