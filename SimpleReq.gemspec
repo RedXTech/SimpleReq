@@ -9,4 +9,7 @@ Gem::Specification.new do |s|
   s.files       = ["lib/SimpleReq.rb"]
   s.homepage    = 'https://github.com/RedXTech/SimpleReq'
   s.license     = 'Apache-2.0'
+  s.add_runtime_dependency 'rest-client', '~>2.0', '>= 2.0.0'
+  s.add_runtime_dependency 'json', '~>1.8', '>= 1.8.3'
+  s.add_runtime_dependency 'hpricot', '~>0.8', '>= 0.8.6'
 end
