@@ -30,7 +30,6 @@ class SimpleReq
   def self.j_post(url, post)
     JSON.parse(post(url, post).body)
   end
-
   def self.get_el(url, el, get={})
     if get.empty?
       req = get(url).body
