@@ -1,4 +1,5 @@
 # SimpleReq
+[![Gem Version](https://badge.fury.io/rb/simplereq.svg)](https://badge.fury.io/rb/simplereq)
 
 SimpleReq is a simple requests library for Ruby.
 
