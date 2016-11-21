@@ -36,7 +36,11 @@ request.code
 ### Get
 `SimpleReq.get()` returns an object that can be interacted with by `.body` and `.code`. `.body` returns a string of the HTML document, and `.code` returns a integer of the HTTP response code.
 
-You can also pass a Hash to the get method (`SimpleReq.get('https://redxtech.ca/test/simplereq/get_args), {arg1: 'argument_one', arg2: 'argument_two'}`), which will instead get `https://redxtech.ca/test/simplereq/get_args?arg1=argument1&arg2=argument_two`
+You can also pass a Hash to the get method
+```ruby
+SimpleReq.get('https://redxtech.ca/test/simplereq/get_args), {arg1: 'argument_one', arg2: 'argument_two'}`)
+```
+Which will instead get `https://redxtech.ca/test/simplereq/get_args?arg1=argument1&arg2=argument_two`
 
 ### Post
 SimpleReq also supports `post`ing data to web pages as well.
