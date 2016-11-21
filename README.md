@@ -90,7 +90,7 @@ request.inner_html
 ```
 
 ## Future...
-One of my plans it to work on making SimpleReq independent from rest-client. I was able to use pure Ruby without any gems to make http requests, but something on my machine prevented it from being able to make https requests. It was working on my linux machines, but not my windows ones, so I decided to make it work fully with everything instead of dependent on OS.
+One of my plans it to work on making SimpleReq independent from rest-client. I was able to use pure Ruby without any gems to make http requests, but something on my machine prevented it from being able to make https requests. It was working on my linux machines, but not my windows ones, so I decided to make it work fully with everything instead of being dependent on OS.
 
 I plan to add more features in the future, so any suggestions are welcomed. Keep in mind that I do wish to keep it simple.
 
