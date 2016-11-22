@@ -1,10 +1,12 @@
 require 'rest-client'
 require 'json'
 require 'hpricot'
+require 'uri'
 
 class SimpleReq
   def self.get(url, get={})
     if get.empty?
+      url = URI.encode(url)
       return RestClient.get(url)
     else
       args = '?'
@@ -14,11 +16,12 @@ class SimpleReq
         args << "#{p}=#{v}"
         first = false
       }
-      return RestClient.get("#{url}#{args}")
+      url = URI.encode("#{url}#{args}")
+      return RestClient.get(url)
     end
   end
   def self.post(url, post)
-    return RestClient.post(url, post)
+    return RestClient.post(URI.encode(url), post)
   end
   def self.j_get(url, get={})
     if get.empty?
