@@ -1,6 +1,6 @@
 require 'rest-client'
 require 'json'
-require 'hpricot'
+require 'nokogiri'
 require 'uri'
 
 class SimpleReq
@@ -36,8 +36,9 @@ class SimpleReq
   def self.get_el(url, el, get={})
     if get.empty?
       req = get(url).body
-      doc = Hpricot(req)
-      return (doc/el)
+      doc = Nokogiri.HTML(req)
+      element = doc.at_css(el)
+      return element.content
     else
       args = '?'
       first = true
@@ -47,13 +48,15 @@ class SimpleReq
         first = false
       }
       req = get(url, get).body
-      doc = Hpricot(req)
-      return (doc/el)
+      doc = Nokogiri.HTML(req)
+      element = doc.at_css(el)
+      return element.content
     end
   end
   def self.post_el(url, el, post)
     req = post(url, post).body
-    doc = Hpricot(req)
-    return (doc/el)
+    doc = Nokogiri.HTML(req)
+    element = doc.at_css(el)
+    return element.content
   end
 end
