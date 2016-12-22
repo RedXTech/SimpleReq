@@ -38,7 +38,7 @@ class SimpleReq
       req = get(url).body
       doc = Nokogiri.HTML(req)
       element = doc.at_css(el)
-      return element.content
+      return element.inner_html
     else
       args = '?'
       first = true
@@ -50,13 +50,13 @@ class SimpleReq
       req = get(url, get).body
       doc = Nokogiri.HTML(req)
       element = doc.at_css(el)
-      return element.content
+      return element.inner_html
     end
   end
   def self.post_el(url, el, post)
     req = post(url, post).body
     doc = Nokogiri.HTML(req)
     element = doc.at_css(el)
-    return element.content
+    return element.inner_html
   end
 end
